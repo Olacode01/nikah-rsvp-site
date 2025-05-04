@@ -213,3 +213,31 @@ textarea {
   color: #000; /* Black text */
   margin-bottom: 1rem;
 }
+
+/* Shimmer text effect */
+.shimmer {
+  color: #d63384;
+  font-size: 1.2rem;
+  font-weight: bold;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { opacity: 0.8; }
+  50% { opacity: 1; text-shadow: 0 0 8px #d63384 }
+  100% { opacity: 0.8; }
+}
+
+/* Heart pulse animation */
+.shimmer::before {
+  content: '💗';
+  margin-right: 8px;
+  animation: pulse 1.5s infinite ease-in-out;
+  display: inline-block;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}

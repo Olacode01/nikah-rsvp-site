@@ -1,4 +1,3 @@
-// Countdown Timer
 const countdown = document.getElementById('countdown');
 const eventDate = new Date('2025-07-05T09:00:00').getTime();
 
@@ -17,11 +16,15 @@ function updateCountdown() {
   const seconds = Math.floor((distance / 1000) % 60);
 
   countdown.innerHTML = `
-    <p><strong>${days}</strong> days 
+  <p class="shimmer">
+    ❤️ <strong>${days}</strong> days 
     <strong>${hours}</strong> hours 
     <strong>${minutes}</strong> minutes 
-    <strong>${seconds}</strong> seconds</p>
-  `;
+    <strong>${seconds}</strong> seconds
+  </p>
+`;
+
 }
 
+updateCountdown(); // Add this to show immediately
 setInterval(updateCountdown, 1000);
