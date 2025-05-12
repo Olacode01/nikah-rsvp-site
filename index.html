@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Zainab & Toheeb's Nikkah Invitation</title>
   <link rel="stylesheet" href="style.css" />
-
 </head>
 <body>
 
@@ -16,12 +15,10 @@
   </header>
 
   <section class="hero">
-    <p class="date">Join us for our Nikkah Ceremony </p>
+    <p class="date">With the blessings of Allah (SWT),we invite you to our Nikah ceremony!. </p>
     <p class="date">Saturday, 5th July 2025 | 09:00 AM</p>
     <div id="countdown"></div> <br>
     <a href="https://maps.app.goo.gl/nN1StdEzS6BQ8B2FA" class="btn"> Take me to the Venue</a>  
-    </a>
-    
   </section>
 
   <section class="story">
@@ -33,106 +30,92 @@
   </section>
 
   <section class="gallery">
-    <h2>View Once 😂</h2>
+    <h2>We said Bismillah. Now come join us!😂</h2>
     <div class="photos-row">
-      <img src="https://picsum.photos/400/300?random=1" alt="Couple 1" />
-      <img src="https://picsum.photos/400/300?random=2" alt="Couple 2" />
-      <img src="https://drive.google.com/file/d/18obkdWc0k1SwkNf8kUDhEOCgi5y5yeA5/view?usp=sharing" alt="Nikkah" />
+      <img src="https://github.com/Olacode01/nikah-rsvp-site/raw/master/images/zee_Tee.jpg" alt="Couple 3" />
     </div>
   </section>
 
-  <section id="rsvp" class="rsvp">
-    <h2>RSVP </h2>
-    <form action="https://script.google.com/macros/s/AKfycbwNAz3TDbM8pjEMrXbZIMITs0Juzn09IHgH12eN0iQSaNE_GN-2X8LngebHKbliEMxxPw/exec" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-  
-      <select name="state" required>
-        <option value="">Where will you be coming from?</option>
-        <option value="Abia">Abia</option>
-        <option value="Adamawa">Adamawa</option>
-        <option value="Akwa Ibom">Akwa Ibom</option>
-        <option value="Anambra">Anambra</option>
-        <option value="Bauchi">Bauchi</option>
-        <option value="Bayelsa">Bayelsa</option>
-        <option value="Benue">Benue</option>
-        <option value="Borno">Borno</option>
-        <option value="Cross River">Cross River</option>
-        <option value="Delta">Delta</option>
-        <option value="Ebonyi">Ebonyi</option>
-        <option value="Edo">Edo</option>
-        <option value="Ekiti">Ekiti</option>
-        <option value="Enugu">Enugu</option>
-        <option value="FCT">FCT</option>
-        <option value="Gombe">Gombe</option>
-        <option value="Imo">Imo</option>
-        <option value="Jigawa">Jigawa</option>
-        <option value="Kaduna">Kaduna</option>
-        <option value="Kano">Kano</option>
-        <option value="Katsina">Katsina</option>
-        <option value="Kebbi">Kebbi</option>
-        <option value="Kogi">Kogi</option>
-        <option value="Kwara">Kwara</option>
-        <option value="Lagos">Lagos</option>
-        <option value="Nasarawa">Nasarawa</option>
-        <option value="Niger">Niger</option>
-        <option value="Ogun">Ogun</option>
-        <option value="Ondo">Ondo</option>
-        <option value="Osun">Osun</option>
-        <option value="Oyo">Oyo</option>
-        <option value="Plateau">Plateau</option>
-        <option value="Rivers">Rivers</option>
-        <option value="Sokoto">Sokoto</option>
-        <option value="Taraba">Taraba</option>
-        <option value="Yobe">Yobe</option>
-        <option value="Zamfara">Zamfara</option>
-      </select>
-  
-      <select name="attendance" required>
-        <option value="">Will you attend?</option>
-        <option value="Yes">Yes, In Sha Allah!</option>
-        <option value="No">No, unfortunately.</option>
-      </select>
-  
-      <textarea name="message" placeholder="Your wishes, prayers or congratulatory message..." rows="4" required></textarea>
-  
-      <button type="submit">Submit</button>
+  <section id="rsvp" class="rsvp">   
+    <h2>RSVP & Wishes!..  </h2>
+
+    <form id="rsvpForm" action="https://formspree.io/f/mvgawqva" method="POST">  
+      <input type="hidden" name="_redirect" value="https://yourdomain.com/gratitude.html">
+      <div class="form-group">
+        <label for="name" class="form-label">Your Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="E.g., Zainab Toheeb" required />
+      </div>
+    
+      <div class="form-group">
+        <label for="attendance" class="form-label">Will you attend?</label>
+        <select id="attendance" name="attendance" required>
+          <option value="" disabled selected>Choose one...</option>
+          <option value="Yes">✅ Yes, In Sha Allah!</option>
+          <option value="No">❌ No, unfortunately</option>
+        </select>
+      </div>
+    
+      <div class="form-group">
+        <label for="state" class="form-label">Where will you be coming from?</label>
+        <select id="state" name="state" class="form-select" required>
+          <option value="" disabled selected>Select State...</option>
+          <option value="N/A">N/A</option>
+          <option value="Umuahia">Umuahia</option>
+          <option value="Yola">Yola</option>
+          <option value="Uyo">Uyo</option>
+          <option value="Awka">Awka</option>
+          <option value="Bauchi">Bauchi</option>
+          <option value="Yenagoa">Yenagoa</option>
+          <option value="Makurdi">Makurdi</option>
+          <option value="Maiduguri">Maiduguri</option>
+          <option value="Calabar">Calabar</option>
+          <option value="Asaba">Asaba</option>
+          <option value="Abakaliki">Abakaliki</option>
+          <option value="Benin City">Benin City</option>
+          <option value="Ado-Ekiti">Ado-Ekiti</option>
+          <option value="Enugu">Enugu</option>
+          <option value="Gombe">Gombe</option>
+          <option value="Owerri">Owerri</option>
+          <option value="Dutse">Dutse</option>
+          <option value="Kaduna">Kaduna</option>
+          <option value="Kano">Kano</option>
+          <option value="Katsina">Katsina</option>
+          <option value="Birnin Kebbi">Birnin Kebbi</option>
+          <option value="Lokoja">Lokoja</option>
+          <option value="Ilorin">Ilorin</option>
+          <option value="Ikeja">Ikeja</option>
+          <option value="Lafia">Lafia</option>
+          <option value="Minna">Minna</option>
+          <option value="Abeokuta">Abeokuta</option>
+          <option value="Akure">Akure</option>
+          <option value="Osogbo">Osogbo</option>
+          <option value="Ibadan">Ibadan</option>
+          <option value="Jos">Jos</option>
+          <option value="Port Harcourt">Port Harcourt</option>
+          <option value="Sokoto">Sokoto</option>
+          <option value="Jalingo">Jalingo</option>
+          <option value="Damaturu">Damaturu</option>
+          <option value="Gusau">Gusau</option>
+          <option value="Abuja">Abuja</option>
+          
+          <!-- Additional state options -->
+        </select>
+      </div>
+    
+      <div class="form-group">
+        <label for="message" class="form-label">Wishes / Prayers / Congratulations:</label>
+        <textarea id="message" name="message" placeholder="Your kind words..." rows="5" required class="form-textarea"></textarea>
+      </div>
+    
+      <button type="submit" class="form-button">🎉 Submit RSVP</button>
     </form>
-  
+    
     <div class="calendar-btn">
       <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Zainab+%26+Toheeb+Nikkah&location=Abeokuta&dates=20250705T080000Z/20250705T100000Z" target="_blank" class="btn">
         📅 Add to Google Calendar
       </a>
     </div>
   </section>
-  <script src="countdown.js"></script>
-
-<script>
-  document.getElementById("rsvpForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-    const form = e.target;
-    const data = {
-      name: form.name.value,
-      state: form.state.value,
-      attendance: form.attendance.value,
-      message: form.message.value
-    };
-
-    fetch("YOUR_GOOGLE_SCRIPT_WEBAPP_URL", {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
-    .then(response => {
-      alert("Your RSVP has been submitted!");
-      form.reset();
-    })
-    .catch(error => alert("Error submitting form: " + error));
-  });
-</script>
-
-  
 
   <footer>
     <p>📱 Scan the QR code at the event to view program, gallery & send gifts 🤍 #Zee&Tee'25</p>
