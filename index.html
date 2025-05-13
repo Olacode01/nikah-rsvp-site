@@ -39,8 +39,7 @@
   <section id="rsvp" class="rsvp">   
     <h2>RSVP & Wishes!..  </h2>
 
-    <form id="rsvpForm" action="https://formspree.io/f/mvgawqva" method="POST">  
-      <input type="hidden" name="_redirect" value="https://olacode01.github.io/nikah-rsvp-site/gratitude.html">
+    <form id="rsvpForm">
       <div class="form-group">
         <label for="name" class="form-label">Your Full Name:</label>
         <input type="text" id="name" name="name" placeholder="E.g., Zainab Toheeb" required />
@@ -106,7 +105,7 @@
         <label for="message" class="form-label">Wishes / Prayers / Congratulations:</label>
         <textarea id="message" name="message" placeholder="Your kind words..." rows="5" required class="form-textarea"></textarea>
       </div>
-    
+
       <button type="submit" class="form-button">🎉 Submit RSVP</button>
     </form>
     
@@ -118,10 +117,40 @@
   </section>
 
   <footer>
-    <p>📱 Scan the QR code at the event to view program, gallery & send gifts 🤍 #Zee&Tee'25</p> <a href="gratitude.html">Go to Gratitude Page</a>
+    <p>📱Zee&Tee'25</p> <a href="gratitude.html">Go to Gratitude Page</a>
   </footer>
 
   <script src="countdown.js"></script>
 
 </body>
+
+<script>
+  const form = document.getElementById("rsvpForm");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault(); // Stop default submit
+
+    const formData = new FormData(form);
+    const action = "https://formspree.io/f/mvgawqva";
+
+    try {
+      const response = await fetch(action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (response.ok) {
+        window.location.href = "https://olacode01.github.io/nikah-rsvp-site/gratitude.html";
+      } else {
+        alert("Oops! Something went wrong while submitting the form.");
+      }
+    } catch (error) {
+      alert("Error: " + error.message);
+    }
+  });
+</script>
+
 </html>
